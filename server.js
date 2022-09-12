@@ -26,6 +26,14 @@ import contactRouter from "./routes/contactFormRoutes.js";
 
 app.use(express.json());
 app.use(helmet());
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      "img-src": ["'self'", "https: data:"],
+    },
+  })
+);
 app.use(mongoSanitize());
 
 const limiter = rateLimit({
