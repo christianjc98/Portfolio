@@ -88,6 +88,12 @@ export const ProfilePicture = styled.div`
   display: flex;
   justify-content: center;
   height: 100%;
+  .phone {
+    display: none;
+  }
+  .desktop {
+    display: block;
+  }
   .profile-picture {
     width: 100%;
     max-width: 20rem;
@@ -98,5 +104,11 @@ export const ProfilePicture = styled.div`
   }
   @media screen and (max-width: 820px) {
     margin-top: 2rem;
+    .desktop {
+      display: none;
+    }
+    .phone {
+      display: block;
+    }
   }
 `;

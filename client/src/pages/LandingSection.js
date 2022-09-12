@@ -27,6 +27,13 @@ const AboutSection = () => {
           <LandingText>
             <h1>Christian Janssen</h1>
             <h2>Full-Stack Developer</h2>
+            <ProfilePicture className={inView ? "animate" : "initial"}>
+              <img
+                className="profile-picture phone"
+                src={profilePic}
+                alt="Profile"
+              />
+            </ProfilePicture>
             <p>
               I'm a full-stack web developer specialized on building exciting
               digital experiences, and using technologies to solve daily
@@ -37,8 +44,12 @@ const AboutSection = () => {
             </a>
           </LandingText>
         </Landing>
-        <ProfilePicture className={inView ? "animate" : "initial"}>
-          <img className="profile-picture" src={profilePic} alt="Profile" />
+        <ProfilePicture className={inView ? "animate " : "initial "}>
+          <img
+            className="profile-picture desktop"
+            src={profilePic}
+            alt="Profile"
+          />
         </ProfilePicture>
       </Container>
     </Background>

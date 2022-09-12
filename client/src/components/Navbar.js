@@ -3,7 +3,6 @@ import {
   LogoContainer,
   Menu,
   MenuItem,
-  MenuItemLink,
   MobileIcon,
   Wrapper,
 } from "../assets/wrappers/Navbar";
@@ -12,6 +11,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import links from "../utils/links";
 import { IconContext } from "react-icons/lib";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -33,16 +33,12 @@ const Navbar = () => {
             {links.map((link, index) => {
               return (
                 <MenuItem key={index}>
-                  <MenuItemLink
-                    onClick={() => {
-                      setShowMobileMenu(!showMobileMenu);
-                    }}
-                  >
+                  <Link class="menu-item-link" to={`/${link.path}`}>
                     <div>
                       {link.icon}
                       {link.text}
                     </div>
-                  </MenuItemLink>
+                  </Link>
                 </MenuItem>
               );
             })}

@@ -10,6 +10,7 @@ import ProjectCard from "../components/ProjectCard";
 
 import { FaArrowRight } from "react-icons/fa";
 import { useInView } from "react-intersection-observer";
+import { Link } from "react-router-dom";
 
 const ProjectSection = () => {
   const [projects, setProjects] = useState(null);
@@ -32,6 +33,7 @@ const ProjectSection = () => {
       <Container
         ref={ref}
         className={inView ? "animate container" : "container"}
+        id="project-section"
       >
         <h2>My work</h2>
         <CardContainer>
@@ -52,9 +54,9 @@ const ProjectSection = () => {
         {projects && (
           <MoreProjectsDiv>
             <p>
-              <a>
+              <Link to="/projects">
                 More Projects <FaArrowRight />
-              </a>
+              </Link>
             </p>
           </MoreProjectsDiv>
         )}

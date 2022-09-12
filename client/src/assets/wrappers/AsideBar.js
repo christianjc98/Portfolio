@@ -9,6 +9,10 @@ export const Container = styled.div`
   z-index: 10;
   color: #fffffe;
 
+  .hide {
+    display: none;
+  }
+
   @media screen and (max-width: 1300px) {
     display: none;
   }

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import links from "../utils/links";
 
 const NavLinks = ({ toggle }) => {
@@ -6,10 +7,10 @@ const NavLinks = ({ toggle }) => {
       {links.map((item) => {
         const { id, text, icon, path } = item;
         return (
-          <a href={path} className="nav-link" key={id}>
+          <Link className="nav-link" key={id}>
             <span className="icon">{icon}</span>
             {text}
-          </a>
+          </Link>
         );
       })}
     </div>

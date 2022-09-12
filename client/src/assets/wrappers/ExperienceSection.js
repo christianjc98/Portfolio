@@ -64,7 +64,7 @@ export const Container = styled.div`
   }
 
   .animate {
-    animation: slide-in-anim 1.75s ease-out forwards;
+    animation: slide-in-anim 1.5s ease-out forwards;
     transform: translateX(-100%);
     opacity: 0;
   }
@@ -79,7 +79,7 @@ export const Container = styled.div`
   }
 
   .animate-right {
-    animation: slide-in-anim-right 1.75s ease-out forwards;
+    animation: slide-in-anim-right 1.5s ease-out forwards;
     transform: translateX(100%);
     opacity: 0;
   }

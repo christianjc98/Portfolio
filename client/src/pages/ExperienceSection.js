@@ -25,7 +25,7 @@ const ExperienceSection = () => {
           ></path>
         </svg>
       </div>
-      <Container ref={ref} className="container">
+      <Container ref={ref} className="container" id="experience-section">
         <InformationContainer className={inView ? "animate" : ""}>
           <h2>Me, And my Code Journey</h2>
           <p>

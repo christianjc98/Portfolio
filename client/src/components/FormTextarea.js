@@ -1,8 +1,7 @@
-const FormRow = ({
+const FormTextarea = ({
   name,
   labelText,
   value,
-  type,
   handleChange,
   placeholder,
 }) => {
@@ -11,15 +10,14 @@ const FormRow = ({
       <label htmlFor={name} className="form-label">
         {labelText || name}
       </label>
-      <input
-        type={type}
+      <textarea
         value={value}
         name={name}
         onChange={handleChange}
-        className="form-input"
+        className="form-textarea"
         placeholder={placeholder}
       />
     </div>
   );
 };
-export default FormRow;
+export default FormTextarea;

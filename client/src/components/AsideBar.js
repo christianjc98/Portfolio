@@ -7,10 +7,10 @@ import {
 
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
-const AsideBar = () => {
+const AsideBar = ({ inView }) => {
   return (
     <Container>
-      <SocialMedia>
+      <SocialMedia className={inView ? "hide" : ""}>
         <SocialMediaItem>
           <SocialMediaLink>
             <FaLinkedin />

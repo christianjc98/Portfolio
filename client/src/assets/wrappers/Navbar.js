@@ -20,10 +20,10 @@ export const Wrapper = styled.div`
 `;
 
 export const LogoContainer = styled.div`
-  margin-left: 0.5rem;
+  margin-left: 1rem;
   display: flex;
   align-items: center;
-  width: 2rem;
+
   .logo {
     display: flex;
     align-items: center;
@@ -57,6 +57,42 @@ export const Menu = styled.ul`
 
 export const MenuItem = styled.li`
   height: 100%;
+  .menu-item-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0.5rem 1rem;
+    color: var(--textColor);
+    cursor: pointer;
+    transition: 0.5s all ease;
+
+    &:hover {
+      color: #7f5af0;
+      transition: 0.5s all ease;
+    }
+
+    div {
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      display: flex;
+
+      svg {
+        margin-right: 0.5rem;
+      }
+    }
+
+    @media screen and (max-width: 960px) {
+      width: 100%;
+
+      div {
+        width: 35%;
+        justify-content: left;
+      }
+    }
+  }
   @media screen and (max-width: 960px) {
     width: 100%;
     height: 70px;
@@ -69,41 +105,7 @@ export const MenuItem = styled.li`
   }
 `;
 
-export const MenuItemLink = styled.a`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  transition: 0.5s all ease;
-
-  &:hover {
-    color: #7f5af0;
-    transition: 0.5s all ease;
-  }
-
-  div {
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-
-    svg {
-      margin-right: 0.5rem;
-    }
-  }
-
-  @media screen and (max-width: 960px) {
-    width: 100%;
-
-    div {
-      width: 35%;
-      justify-content: left;
-    }
-  }
-`;
+export const MenuItemLink = styled.a``;
 
 export const MobileIcon = styled.div`
   display: none;

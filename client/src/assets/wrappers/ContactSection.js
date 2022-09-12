@@ -96,8 +96,89 @@ export const ContactInfoContainer = styled.div`
     margin: 0 auto;
     display: block;
   }
+
+  @media screen and (max-width: 820px) {
+    img {
+      display: none;
+    }
+  }
 `;
 
 export const FormContainer = styled.div`
-  margin-top: 4rem;
+  margin-top: 2.5rem;
+  h3 {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 900;
+    background: linear-gradient(to right, #a4b9cb 0%, #eee 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0;
+  }
+  form {
+    margin-top: 0rem;
+    background-color: transparent;
+    box-shadow: none;
+    :hover {
+      box-shadow: none;
+    }
+  }
+  button {
+    display: flex;
+    padding: 1.25em 3em;
+    font-size: 1rem;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid var(--grey-200);
+    background: linear-gradient(
+      to right,
+      var(--grey-200) 50%,
+      var(--primary-900) 50%
+    );
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 0.5s ease-out;
+    color: var(--grey-200);
+    cursor: pointer;
+    :hover {
+      background-position: left bottom;
+      color: var(--primary-900);
+    }
+    svg {
+      margin-left: 1rem;
+    }
+  }
+  .form-input,
+  .form-textarea {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--grey-200);
+    border-radius: 0;
+    color: var(--textColor);
+    resize: none;
+    :focus {
+      outline: none;
+      ::placeholder {
+        color: transparent;
+      }
+    }
+  }
+
+  .form-textarea {
+    height: 5rem;
+  }
+
+  .input-error {
+    font-weight: "bold";
+    color: #dc3545;
+    font-size: var(--extra-small-text);
+  }
+
+  @media screen and (max-width: 820px) {
+    margin-top: 0;
+    h3 {
+      display: none;
+    }
+  }
 `;

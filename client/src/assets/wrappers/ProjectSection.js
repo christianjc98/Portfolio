@@ -66,6 +66,8 @@ export const MoreProjectsDiv = styled.div`
       display: flex;
       align-items: center;
       cursor: pointer;
+      text-decoration: none;
+      color: var(--textColor);
       :hover {
         text-decoration: underline;
         svg {
