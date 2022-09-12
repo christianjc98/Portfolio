@@ -17,17 +17,18 @@ const ProjectPage = () => {
   const [projects, setProjects] = useState(null);
   const [numOfPages, setNumOfPages] = useState(null);
   const [page, setPage] = useState(1);
-  const getProjects = async () => {
-    let url = `api/v1/projects?limit=6&page=${page}`;
-    try {
-      const { data } = await axios.get(url);
-      setProjects(data.projects);
-      setNumOfPages(data.numOfPages);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+
   useEffect(() => {
+    const getProjects = async () => {
+      let url = `api/v1/projects?limit=6&page=${page}`;
+      try {
+        const { data } = await axios.get(url);
+        setProjects(data.projects);
+        setNumOfPages(data.numOfPages);
+      } catch (error) {
+        console.log(error);
+      }
+    };
     getProjects();
   }, [page]);
 

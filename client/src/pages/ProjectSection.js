@@ -15,16 +15,17 @@ import { Link } from "react-router-dom";
 const ProjectSection = () => {
   const [projects, setProjects] = useState(null);
   const { ref, inView } = useInView({ triggerOnce: true });
-  const getProjects = async () => {
-    let url = "api/v1/projects?limit=3";
-    try {
-      const { data } = await axios.get(url);
-      setProjects(data.projects);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+
   useEffect(() => {
+    const getProjects = async () => {
+      let url = "api/v1/projects?limit=3";
+      try {
+        const { data } = await axios.get(url);
+        setProjects(data.projects);
+      } catch (error) {
+        console.log(error);
+      }
+    };
     getProjects();
   }, []);
 
