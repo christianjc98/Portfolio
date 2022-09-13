@@ -4,7 +4,7 @@ const ProjectCard = ({ webLink, imgLink, title, description, codeLink }) => {
   return (
     <Container>
       <a target="_blank" rel="noreferrer" href={webLink}>
-        <img src={imgLink} alt={title} />
+        <img src={imgLink} crossorigin="anonymous" alt={title} />
       </a>
       <h4>{title}</h4>
       <p>{description}</p>
