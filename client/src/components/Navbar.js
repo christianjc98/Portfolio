@@ -32,7 +32,12 @@ const Navbar = () => {
           <Menu open={showMobileMenu}>
             {links.map((link, index) => {
               return (
-                <MenuItem key={index}>
+                <MenuItem
+                  key={index}
+                  onClick={() => {
+                    setShowMobileMenu(!showMobileMenu);
+                  }}
+                >
                   <Link class="menu-item-link" to={`/${link.path}`}>
                     <div>
                       {link.icon}
