@@ -176,7 +176,7 @@ export const FormContainer = styled.div`
   }
 
   @media screen and (max-width: 820px) {
-    margin-top: 0;
+    margin-top: 0.1rem;
     h3 {
       display: none;
     }
